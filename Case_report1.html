@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Case_report1.css">
+    <title>CASE REPORT</title>
+</head>
+
+<body>
+    <nav class="header">
+        <p class="portal_name">MP Police Central Command</p>
+        <img src="3logo3.png" alt="">
+    </nav>
+
+    <div class="main_content">
+        <div class="heading">CASE REPORT</div>
+
+        <section class="pre_details">
+            <label>Case Number:</label>
+            <input type="text" placeholder="Enter Case Number" id="caseNumber">
+            <label>Date:</label>
+            <input type="date">
+            <label>Location</label>
+            <input type="text" placeholder="Enter Location">
+            <label>Crime type</label>
+            <input type="text" placeholder="Crime Type">
+        </section>
+
+        <section class="case_details">
+
+            <div class="incident">
+                <h2>Incident Reports</h2>
+                <div class="incident_details">
+                    <div class="display_list"></div>
+                    <button class="add" id="incidentAddButton">Add</button>
+                </div>
+                <div class="incident_reports">
+                    <textarea placeholder=""></textarea>
+                    <button class="update" id="incidentUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="witness">
+                <h2>Witness Statements</h2>
+                <div class="witness_details">
+                    <div class="display_list"></div>
+                    <button class="add" id="witnessAddButton">Add</button>
+                </div>
+                <div class="witness_statments">
+                    <textarea></textarea>
+                    <button class="update" id="witnessUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="investigation">
+                <h2>Investigation Notes</h2>
+                <div class="investigation_details">
+                    <div class="display_list"></div>
+                    <button class="add" id="investigationAddButton">Add</button>
+                </div>
+                <div class="investigation_notes">
+                    <textarea placeholder=""></textarea>
+                    <button class="update" id="investigationUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="evidence">
+                <h2>Evidence Collection</h2>
+                <div class="evidence_details">
+                    <div class="display_list"></div>
+                    <button class="add" id="evidenceAddButton">Add</button>
+                </div>
+                <div class="evidence_collection">
+                    <input type="file">
+                    <button class="update" id="evidenceUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="documentation">
+                <h2>Documentation</h2>
+                <div class="documentation_details">
+                    <div class="display_list"></div>
+                    <button class="add" id="documentationAddButton">Add</button>
+                </div>
+                <div class="documentation_collection">
+                    <input type="file">
+                    <button class="update" id="documentationUpdateButton">update</button>
+                </div>
+            </div>
+        </section>
+        <button class="submit"> Submit Case</button>
+        <button class="submit"> Case Complete</button>
+
+    </div>
+    <script>
+        // ...............all div  content here .............
+        var incident_details = document.querySelector(".incident_details");
+        var incident_reports = document.querySelector(".incident_reports");
+        var witness_details = document.querySelector(".witness_details");
+        var witness_statements = document.querySelector(".witness_statments");
+        var investigation_details = document.querySelector(".investigation_details");
+        var investigation_notes = document.querySelector(".investigation_notes");
+        var evidence_details = document.querySelector(".evidence_details");
+        var evidence_collection = document.querySelector(".evidence_collection");
+        var documentation_details = document.querySelector(".documentation_details");
+        var documentation_collection = document.querySelector(".documentation_collection");
+// ...........add button.........
+        var incident_button = document.getElementById("incidentAddButton");
+        var witness_button = document.getElementById("witnessAddButton");
+        var investigation_button = document.getElementById("investigationAddButton");
+        var evidence_button = document.getElementById('evidenceAddButton');
+        var documentation_button = document.getElementById("documentationAddButton");
+// ........update button.........
+        var incidentUpdateButton = document.getElementById("incidentUpdateButton");
+        var witnessUpdateButton = document.getElementById("witnessUpdateButton");
+        var investigationUpdateButton = document.getElementById("investigationUpdateButton");
+        var evidenceUpdateButton = document.getElementById("evidenceUpdateButton");
+        var documentationUpdateButton = document.getElementById("documentationUpdateButton");
+
+// all event  listeners are added in the addButtons() function
+        incident_button.addEventListener("click", function () {
+            toggleDisplay(incident_details, incident_reports);
+        });
+
+        witness_button.addEventListener("click", function () {
+            toggleDisplay(witness_details, witness_statements);
+        });
+
+        investigation_button.addEventListener("click", function () {
+            toggleDisplay(investigation_details, investigation_notes);
+        });
+
+        evidence_button.addEventListener("click", function () {
+            toggleDisplay(evidence_details, evidence_collection);
+        });
+
+        documentation_button.addEventListener("click", function () {
+            toggleDisplay(documentation_details, documentation_collection);
+        });
+// toggle funcation for addButton()
+        function toggleDisplay(details, reportsOrCollection) {
+            var display = window.getComputedStyle(details).getPropertyValue("display");
+            if (display === "none") {
+                details.style.display = "block";
+                if (reportsOrCollection) reportsOrCollection.style.display = "none";
+            } else {
+                details.style.display = "none";
+                if (reportsOrCollection) reportsOrCollection.style.display = "block";
+            }
+        }
+// toggle funcation for updateButton()
+
+        function toggleUpdate(details, reportsOrCollection) {
+        var display = window.getComputedStyle(details).getPropertyValue("display");
+        if (display === "none") {
+            details.style.display = "block";
+            if (reportsOrCollection) reportsOrCollection.style.display = "none";
+        } else {
+            details.style.display = "none";
+            if (reportsOrCollection) reportsOrCollection.style.display = "block";
+        }
+    }
+
+    // Add event listeners for update buttons
+    incidentUpdateButton.addEventListener("click", function () {
+        toggleUpdate(incident_details, incident_reports);
+        // write php code here
+    });
+
+    witnessUpdateButton.addEventListener("click", function () {
+        toggleUpdate(witness_details, witness_statements);
+    });
+
+    investigationUpdateButton.addEventListener("click", function () {
+        toggleUpdate(investigation_details, investigation_notes);
+    });
+
+    evidenceUpdateButton.addEventListener("click", function () {
+        toggleUpdate(evidence_details, evidence_collection);
+    });
+
+    documentationUpdateButton.addEventListener("click", function () {
+        toggleUpdate(documentation_details, documentation_collection);
+    });
+
+    </script>
+
+    <footer>
+        <p>© 2024 Ministry of Home Affairs, Madhya Pradesh. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

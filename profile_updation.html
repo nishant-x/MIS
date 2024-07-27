@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="profile_updation.css">
+</head>
+
+<body>
+    <nav class="header">
+        <p class="portal_name">MP Police Central Command</p>
+        <img src="3logo3.png" alt="">
+    </nav>
+    <div class="container">
+        <header>
+            <h1>PROFILE UPDATION</h1>
+            <img src="logo.png" alt="Logo" height="100" width="100">
+        </header>
+
+        <main>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="station">Station Name:</label>
+                    <input type="text" id="station" placeholder="Enter your police station name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regiment">Regiment No.:</label>
+                    <input type="number" id="regiment" placeholder="Enter your regiment number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="joiningYear">Joining Year:</label>
+                    <input type="month" id="joiningYear" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <select id="department">
+                        <option value="BSF">BSF</option>
+                        <option value="SSB">SSB</option>
+                        <option value="CRPF">CRPF</option>
+                        <option value="CISF">CISF</option>
+                        <option value="ITBP">ITBP</option>
+                        <option value="NSG">NSG</option>
+                        <option value="NDRF">NDRF</option>
+                        <option value="IB">IB</option>
+                        <option value="R&AW">R&AW</option>
+                        <option value="SPG">SPG</option>
+                        <option value="NIA">NIA</option>
+                        <option value="CBI">CBI</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="post">Post:</label>
+                    <input type="text" id="post" placeholder="Enter your post" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile no.:</label>
+                    <input type="tel" id="mobile" placeholder="+91--------" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" placeholder="abc....@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" placeholder="Enter your address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <p>© 2024 Ministry of Home Affairs, Madhay Pradesh. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

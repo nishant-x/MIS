@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.case {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.case a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.case-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.case-details p {
+    margin: 5px 0;
+}
+
+.case-details p:first-child {
+    margin-top: 0;
+}
+
+.case-details p:last-child {
+    margin-bottom: 0;
+}
+
+.case-details {
+    line-height: 1.6;
+}
+
+/* Optional: Add hover effect */
+.case:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}

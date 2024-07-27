@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.header {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+.main_container {
+    display: flex;
+    width: 100%;
+}
+
+.nav_bar {
+    background-color: #0056b3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 3%;
+    width: 40%;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav_bar a {
+    color: white;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav_bar a:hover {
+    background-color: #fff;
+    color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.station_details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.station_profile,
+.station_case,
+.station_order,
+.leave_approval {
+    width: 100%;
+    flex: 1;
+}
+
+.station_profile {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.station_profile .img {
+    margin-right: 20px;
+}
+
+.station_profile .img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info h3 span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.station_case h2,
+.station_order h2,
+.leave_approval h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.station_case,
+.station_order,
+.leave_approval {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.station_case>div,
+.station_order>div,
+.leave_approval>div {
+    margin-bottom: 10px;
+}
+
+.cases_details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cases {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 60px) / 3);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cases h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cases span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4CAF50
+}
+
+.application_status table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application_status th,
+.application_status td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.application_status th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.application_status tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.application_status tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.application_status button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application_status .Approval_btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.application_status .Rejected_btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .station_profile,
+    .station_case,
+    .station_order,
+    .leave_approval {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main_container {
+        flex-direction: column;
+    }
+
+    .nav_bar {
+        width: 100%;
+        flex-direction: row;
+        gap: 3%;
+    }
+
+    .station_profile {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main_container {
+        flex-direction: column;
+    }
+
+    .nav_bar {
+        width: 100%;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .cases {
+        flex-basis: 100%;
+    }
+}

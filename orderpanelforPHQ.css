@@ -1,0 +1,195 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.sender-info,
+.requirement-details,
+.station_button {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.sender-info h2,
+.requirement-details h2,
+.station_button h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sender-info span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.requirement-details textarea,
+.requirement-details input[type="number"],
+.requirement-details input[type="text"] {
+    width: calc(100% - 5px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.station_button button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.station_button button:hover {
+    background-color: #007bff;
+}
+
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header img {
+        margin-bottom: 10px;
+    }
+
+    .sender-info,
+    .requirement-details,
+    .station_button {
+        padding: 15px;
+    }
+}
+
+.order_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.station_button {
+    flex-basis: 48%;
+    /* Adjust width as needed */
+}
+
+.station_list {
+    margin-top: 10px;
+    display: none;
+}
+
+.station_list label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.station_list input[type="checkbox"] {
+    display: none;
+}
+
+.station_list label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0056b3;
+    border-radius: 3px;
+    /* Change border radius for checkbox */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.station_list input[type="checkbox"]:checked+label::before,
+.station_list input[type="checkbox"]:hover+label::before {
+    background-color: #0056b3;
+}
+
+.station_list input[type="checkbox"]+label {
+    color: #333;
+}
+
+.order_button button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.order_button button:hover {
+    background-color: #007bff;
+}

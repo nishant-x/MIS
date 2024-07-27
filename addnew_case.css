@@ -1,0 +1,300 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.pre_details {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.main_content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+.incident_reports,
+.witness_statments,
+.investigation_notes,
+.evidence_collection,
+.documentation_collection {
+    background-color: #fff;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.display_list {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.submit,
+.update {
+    padding: 12px 24px;
+    background-color: #0056b3;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.update:hover,
+.submit:hover {
+    background-color: #004282;
+}
+
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+    .header img {
+        height: 60px;
+        width: 60px;
+    }
+    .portal_name {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .main_content {
+        padding: 10px;
+    }
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    input[type="file"] {
+        font-size: 14px;
+    }
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Hide the default file input button */
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+
+/* Style the custom file input button */
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+}
+
+textarea::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+textarea:focus {
+    border-color: #007bff; /* Border color on focus */
+    outline: none; /* Remove outline on focus */
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+}
+.order_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.police_button,
+.station_button {
+    flex-basis: 48%;
+    /* Adjust width as needed */
+}
+
+.police_list,
+.station_list {
+    margin-top: 10px;
+    display: none;
+}
+
+.police_list label,
+.station_list label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.police_list input[type="checkbox"],
+.station_list input[type="checkbox"] {
+    display: none;
+}
+
+.police_list label::before,
+.station_list label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0056b3;
+    border-radius: 3px; /* Change border radius for checkbox */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.police_list input[type="checkbox"]:checked+label::before,
+.police_list input[type="checkbox"]:hover+label::before,
+.station_list input[type="checkbox"]:checked+label::before,
+.station_list input[type="checkbox"]:hover+label::before {
+    background-color: #0056b3;
+}
+
+.police_list input[type="checkbox"]+label,
+.station_list input[type="checkbox"]+label {
+    color: #333;
+}
+.sender_station,
+.order_button button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.order_button button:hover {
+    background-color: #007bff;
+}
+#result{
+    width: calc(100% - 5px);
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#location_button{
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+ select {
+            width: 500px;
+            height: 42px;
+        }

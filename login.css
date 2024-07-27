@@ -1,0 +1,185 @@
+/* login.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.header {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Left Login Div Styles */
+.leftdiv {
+    text-align: center;
+    height: 439px;
+    width: 240px;
+    background-color: #fff;
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 100px;
+
+}
+
+.leftdiv img {
+    width: 150px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+.leftdiv h3 {
+    margin-bottom: 5px;
+}
+
+.leftdiv h1 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Right Login Div Styles */
+.rightdiv {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 100px;
+}
+
+.rightdiv h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.rightdiv h4 {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #666;
+}
+
+.rightdiv .form-group {
+    margin-bottom: 15px;
+}
+
+.rightdiv label {
+    display: block;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.rightdiv input[type="text"],
+.rightdiv input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.rightdiv input[type="text"]:focus,
+.rightdiv input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+h6 a{
+    font-size: 1.1em;
+    color: #007bff;
+    cursor: pointer; 
+}
+.rightdiv button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rightdiv button:hover {
+    background-color: #0056b3;
+}
+
+.rightdiv button:focus {
+    outline: none;
+}
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .rightdiv {
+        width: 100%;
+        max-width: 400px;
+        text-wrap: wrap;
+        margin-right: 0px;
+
+
+    }
+
+    .leftdiv {
+        box-shadow: 0 0 0;
+        background-color: transparent;
+        margin-left: 0px;
+
+
+    }
+
+    .leftdiv img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+}
+

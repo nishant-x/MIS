@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.nav_bar {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    margin-bottom: 20px;
+}
+
+.navbar-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nav_bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 52px;
+}
+
+.nav_bar li {
+    margin-right: 20px;
+}
+
+.nav_bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.nav_bar a:hover {
+    background-color: #005c95;
+}
+
+.main_body {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: url('https://i0.wp.com/www.socialnews.xyz/wp-content/uploads/2023/10/19/20231019009-scaled.jpg?quality=80&zoom=1&ssl=1') no-repeat center center / cover;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    
+}
+
+.login {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.login:hover {
+    transform: translateY(-10px);
+}
+
+.login h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.login h3 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.login img {
+    max-width: 100%;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.login a {
+    width: 100%;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .navbar-container {
+        padding: 10px;
+    }
+
+    .nav_bar ul {
+        justify-content: center;
+    }
+
+    .nav_bar li {
+        margin-right: 10px;
+    }
+
+    .main_body {
+        flex-direction: column;
+    }
+
+    .login {
+        margin-top: 40px;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .nav_bar li {
+        margin-right: 5px;
+    }
+
+    .main_body {
+        padding: 10px;
+    }
+
+    .login {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+.services {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.service {
+    flex-basis: calc(50% - 20px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h2 {
+    color: #0056b3;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.aboutus {
+    display: none;
+    /* Removed redundant display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-section {
+    flex-basis: calc(33.33% - 20px);
+    /* Adjust as needed for spacing */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #0056b3;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.about-section li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.about-section li:before {
+    content: "\2022";
+    /* Bullet point */
+    color: #0056b3;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

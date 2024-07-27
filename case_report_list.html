@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case List</title>
+    <link rel="stylesheet" href="case_report_list.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="header">
+        <p class="portal_name">MP Police Central Command</p>
+        <img src="https://image.pngaaa.com/883/2051883-middle.png" alt="">
+    </nav>
+    <header>
+        <h1>Case List</h1>
+        <form action="" method="GET">
+            <input type="text" name="search" id="search" placeholder="Search Cases.">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <div class="container">
+        <div class="case">
+            <a href='#'> <!-- Send reference variable in URL -->      
+                <div class='case-details'>
+                    <h2>Case Title</h2>
+                    <p>Case Number: <span>".$row['case_number']."</span></p>
+                    <p>Status: <span>".$row['status']."</span></p>
+                    <p>Assigned Officer: <span>".$row['jawaan_id']."</span></p>
+                    <p>Location: <span>".$row['location']."</span></p>
+                    <p>Crime type: <span>".$row['crime_type']."</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="main_content">
+        <div class="heading">CASE REPORT</div>
+
+        <section class="pre_details">
+            <label>Case Number:</label>
+            <input type="text" placeholder="Enter Case Number" id="caseNumber">
+            <label>Date:</label>
+            <input type="date">
+            <label>Location</label>
+            <input type="text" placeholder="Enter Location">
+            <label>Crime type</label>
+            <input type="text" placeholder="Crime Type">
+        </section>
+
+        <section class="case_details">
+
+            <div class="incident">
+                <h2>Incident Reports</h2>
+           
+                <div class="incident_reports">
+                    <textarea placeholder=""></textarea>
+                    <button class="update" id="incidentUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="witness">
+                <h2>Witness Statements</h2>
+               
+                <div class="witness_statments">
+                    <textarea></textarea>
+                    <button class="update" id="witnessUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="investigation">
+                <h2>Investigation Notes</h2>
+               
+                <div class="investigation_notes">
+                    <textarea placeholder=""></textarea>
+                    <button class="update" id="investigationUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="evidence">
+                <h2>Evidence Collection</h2>
+                
+                <div class="evidence_collection">
+                    <input type="file">
+                    <button class="update" id="evidenceUpdateButton">update</button>
+                </div>
+            </div>
+
+            <div class="documentation">
+                <h2>Documentation</h2>
+                
+                <div class="documentation_collection">
+                    <input type="file">
+                    <button class="update" id="documentationUpdateButton">update</button>
+                </div>
+            </div>
+        </section>
+        <div class="button">
+            <button class="submit"> Submit Case</button>
+            <button class="submit"> Case Complete</button>
+        </div>
+
+    </div>
+    <script>
+        var case_list = document.querySelector('.container');
+        var case_report = document.querySelector(".main_content");
+        var case_report_btn = document.querySelector(".submit");
+        
+        case_list.addEventListener("click", () => {
+            case_report.style.display = 'block';
+            case_list.style.display = 'none';
+        });
+
+        case_report_btn.addEventListener("click", () => {
+            case_report.style.display = 'none';
+            case_list.style.display = 'flex';
+        });
+    </script>
+    <footer>
+        <p>© 2024 Ministry of Home Affairs, Madhya Pradesh. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

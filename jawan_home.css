@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+
+.header {
+    background-color: #0056b3;
+    /* Change brown to blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.portal_name {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.main_container {
+    display: flex;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #0056b3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 3%;
+    width: 40%;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #fff;
+    color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.jawan_details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.personal {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+    margin-bottom: 20px;
+}
+
+.img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info h3 span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.achievement,
+.case,
+.active_status,
+.order_panel,
+.leave_application {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.achievement h2,
+.active_status h2,
+.order_panel h2,
+.leave_application h2,
+.station_case h2,
+.case h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.past_achievements table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.past_achievements th,
+.past_achievements td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.past_achievements th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.past_achievements tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.past_achievements tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+.cases_details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cases {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 60px) / 3);
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cases h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cases span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.active_status {
+    margin-top: 20px;
+}
+
+.active_status h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.active_status input[type="radio"] {
+    display: none;
+}
+
+.active_status label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.active_status label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0056b3;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.active_status input[type="radio"]:checked + label::before,
+.active_status input[type="radio"]:hover + label::before {
+    background-color: #0056b3;
+}
+
+.active_status input[type="radio"] + label {
+    color: #333;
+}
+
+.order_panel .order_message button {
+    padding: 8px 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order_panel .order_message button:hover {
+    background-color: #45a049;
+}
+
+.application_status table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application_status th,
+.application_status td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.application_status th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.application_status tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.application_status tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+/* Default styles */
+/* Add your existing CSS styles here */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    /* Adjust navbar for smaller screens */
+    .navbar a {
+        display: block;
+        text-align: center;
+    }
+
+    /* Adjust jawan details layout */
+    .personal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adjust achievement table for smaller screens */
+    #achievementTable {
+        width: 100%;
+    }
+
+    /* Add more responsive styles as needed */
+}
+
+/* Additional media queries for tablets and smaller laptops */
+@media only screen and (max-width: 1024px) {
+    /* Add tablet-specific styles here */
+}
+
+/* Additional media queries for smaller laptops */
+@media only screen and (max-width: 1366px) {
+    /* Add smaller laptop-specific styles here */
+}
+
+
+
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 2px solid #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer:hover {
+    background-color: #003f7f;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+
